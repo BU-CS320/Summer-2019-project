@@ -9,22 +9,13 @@ data ModuleAst = ModuleAst String [(String, ProcAst)] -- assume the program entr
 -- procedure, parameter names and a body
 data ProcAst = ProcAst [String] [Stmt]  deriving (Eq,Show)
 
-data Stmt =
-  Assignment String Expr
-  | If Expr [Stmt] [Stmt]
-  | While Expr [Stmt]
-  | Return Expr
-
-
+data Stmt -- = ...
 {-should include: Assignment, If, While loops, Return 
 and perhaps: Separators, ForEach loops
 and if you're fancy Print
 -}
    
-data Expr = 
-  Var String | LitteralInt Integer
-  -- .................
-
+data Expr -- = 
 {-should include: 
 Vars
 procedure calls 

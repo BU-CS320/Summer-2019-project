@@ -8,9 +8,7 @@ runStateError (StateError sa) = sa
 
 instance Functor (StateError msg dfn s) where
   -- map the function f to the result of the Parser
-  fmap f (StateError sa) =  StateError (\ dfn s -> case sa dfn s of 
-    Left msg -> Left msg
-    Right (s, a) -> Right (s, f a))
+  fmap f (StateError sa) =  undefined
 
 
 --ignore this for now
@@ -20,11 +18,9 @@ instance Applicative (StateError msg dfn s) where
 
 
 instance Monad (StateError msg dfn s) where
-  return a =  StateError (\ dfn s ->  Right (s,a))
+  return a =  undefined
 
-  (StateError sa) >>= f = StateError (\ dfn s -> case sa dfn s of
-     Left msg -> Left msg 
-     Right (s,a) -> runStateError (f a) dfn s)
+  (StateError sa) >>= f = undefined
 	
 local :: StateError msg dfn s a -> s -> StateError msg dfn s a
 local se new = undefined
