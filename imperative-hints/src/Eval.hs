@@ -9,7 +9,7 @@ import StateErrorMonad
 
 
 -- the goal of the program is to return a value, what values are possible?
-data Val -- = ... deriving Show
+data Val -- = ... deriving (Show,Eq)
 -- Val should handle Ints, Bools, and possibly lists, but not functions since the language is not functional
 
 -- | helper function that runs with the default environment (for example, the stdLib in week 10)

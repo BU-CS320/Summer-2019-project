@@ -7,15 +7,24 @@ data ModuleAst = ModuleAst String [(String, ProcAst)] -- assume the program entr
   deriving (Eq,Show)
 
 -- procedure, parameter names and a body
-data ProcAst = ProcAst [String] Stmt  deriving (Eq,Show)
+data ProcAst = ProcAst [String] [Stmt]  deriving (Eq,Show)
 
-data Stmt -- = ...
+data Stmt =
+  Assignment String Expr
+  | If Expr [Stmt] [Stmt]
+  | While Expr [Stmt]
+  | Return Expr
+
+
 {-should include: Assignment, If, While loops, Return 
 and perhaps: Separators, ForEach loops
 and if you're fancy Print
 -}
    
-data Expr -- = 
+data Expr = 
+  Var String | LitteralInt Integer
+  -- .................
+
 {-should include: 
 Vars
 procedure calls 

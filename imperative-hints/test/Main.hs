@@ -4,6 +4,7 @@ import Test.Tasty
 
 import EvalTest
 import ParserTest
+import ExampleTest
 
 main = defaultMain testSuite
 
@@ -12,7 +13,8 @@ testSuite =
   testGroup
     "allTests"
     [
-    EvalTest.tests,
-    ParserTest.tests
+    ExampleTest.tests,
+    ParserTest.tests,
+    ExampleTest.tests
     -- ...
     ]
