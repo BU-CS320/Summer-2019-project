@@ -11,7 +11,7 @@ import Eval
 
 tests = testGroup "ExampleTest" 
   [
-  testCase  "Euler problem 1" $ do res <- runFile "example/euler9.mylang"
+  testCase  "Euler problem 1" $ do res <- runFile "example/euler1.mylang"
                                    assertEqual "" (Ok $ undefined) $  res
   -- ...
   ] -- Ok
