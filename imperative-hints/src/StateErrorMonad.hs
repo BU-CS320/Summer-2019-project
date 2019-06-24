@@ -21,10 +21,12 @@ instance Monad (StateError msg dfn s) where
   return a =  undefined
 
   (StateError sa) >>= f = undefined
-	
+
+-- runs a stateful computaion with a fresh initial state, when the computation it retuns the origional state 
 local :: StateError msg dfn s a -> s -> StateError msg dfn s a
 local se new = undefined
 
+-- put the dfn's into focus
 getDfns :: StateError msg dfn s dfn
 getDfns = undefined
 
