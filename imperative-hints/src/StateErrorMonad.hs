@@ -22,7 +22,7 @@ instance Monad (StateError msg dfn s) where
 
   (StateError sa) >>= f = undefined
 
--- runs a stateful computaion with a fresh initial state, when the computation it retuns the origional state 
+-- runs a stateful computaion with a fresh initial state, when the computation funishes it retuns the result in the origional state 
 local :: StateError msg dfn s a -> s -> StateError msg dfn s a
 local se new = undefined
 
