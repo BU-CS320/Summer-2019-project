@@ -4,8 +4,6 @@ import Data.Map (Map)
 import qualified Data.Map as Map
 
 import Ast
-import StateErrorMonad
-
 
 
 -- the goal of the program is to return a value, what values are possible?

@@ -1,4 +1,4 @@
-name:                 project
+name:                 project-hints
 version:              0.1.0.0
 synopsis:
 homepage:
@@ -29,4 +29,4 @@ test-suite test
   build-depends:
       containers, base >= 4.7 && < 5
     , tasty >= 0.11.1, tasty-hunit, tasty-quickcheck
-    , project
+    , project-hints
