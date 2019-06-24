@@ -8,9 +8,18 @@ import StateErrorMonad
 
 
 
+
 -- the goal of the program is to return a value, what values are possible?
 data Val -- = ... deriving (Show,Eq)
 -- Val should handle Ints, Bools, and possibly lists, but not functions since the language is not functional
+
+-- replace this instance with "deriving (Show,Eq)" once you write the Val datatype
+instance Show Val where
+  show = undefined
+
+-- replace this instance with "deriving (Show,Eq)" once you write the Val datatype
+instance Eq Val where
+  _ == _ = undefined
 
 -- | helper function that runs with the default environment (for example, the stdLib in week 10)
 -- return either the error string or the value, along with everything that was printed
@@ -33,7 +42,7 @@ getVar v = undefined
 setVar :: String -> d -> StateError msg dfn (Map String d) ()
 setVar n v = undefined
 
-	 
+     
 evalModule :: ModuleAst -> (Either String Val)
 evalModule = undefined -- build up the definitions of module and eval the main procedure
 
