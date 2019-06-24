@@ -56,3 +56,18 @@ make sure you include your solutions in the example directory, and they are test
 If you would like to solve problems in your language not included on project Euler, Mark must approve a week before the due date.
 
 We will allow radically different projects as long as you clear it with Mark at least a week before the deadline.  Cool options include: compilation, type inference/checking/dependent types, anything from previous semesters([Fall-2018](https://github.com/BU-CS320/Spring-2019/blob/master/project/INSTRUCTIONS.md), [Spring-2019](https://github.com/BU-CS320/Spring-2019/blob/master/project/INSTRUCTIONS.md)).
+
+## Project feedback/pre-grade
+
+We will review portions of your project by request before the due date.  This will let you be confident you have completed the sections correctly.
+
+To take advantage of this create 1 piazza post for your project.  Include a link to your repo. Let us know which aspect of the project you would like us to review.
+
+The aspects will be:
+* Parser and parser tests
+* Eval and eval tests
+* Each project euler program you choose to write
+
+We will give you feedback if there are problems, or let you know to expect a full grade for that section.
+
+Please keep adding to the one piazza post as you have more for us to review.
