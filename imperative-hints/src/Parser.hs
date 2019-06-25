@@ -71,3 +71,11 @@ x+7%23 /4 == 3 || x != y && f(1,x,3+80) == true
 -}
 parseExp :: Parser Expr
 parseExp = undefined
+
+-- how you can set up a call experssion
+procCall = do
+  f <- token $ varParser
+  (do token $ literal "("
+      args <- withInfix (fmap (\x -> [x]) parseExp) [(",", (++))]
+      token $ literal  ")"
+      return  undefined) <|> undefined -- (return $ Var f )
