@@ -21,10 +21,10 @@ instance Show Val where
 instance Eq Val where
   _ == _ = undefined
 
--- | helper function that runs with the default environment (for example, the stdLib in week 10)
--- return either the error string or the value, along with everything that was printed
+-- | helper function that runs with the default environment (for example, the stdLib in HW4)
+-- return either the error string or the value
 run :: ModuleAst  -- ^ run this Ast
-      -> (Either String Val, [String])  -- ^ (error message or result value, all the printings)
+      -> Either String Val  -- ^ error message or result value
 run a = undefined 
 
 
